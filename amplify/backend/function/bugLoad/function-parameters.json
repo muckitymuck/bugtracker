@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "api": {
+      "bugtracker": [
+        "read"
+      ]
+    },
+    "storage": {
+      "Bug:@model(appsync)": [
+        "read"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}
