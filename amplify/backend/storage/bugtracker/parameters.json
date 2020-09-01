@@ -1,0 +1,7 @@
+{
+    "tableName": "bugtracker",
+    "partitionKeyName": "bugID",
+    "partitionKeyType": "N",
+    "sortKeyName": "version",
+    "sortKeyType": "N"
+}

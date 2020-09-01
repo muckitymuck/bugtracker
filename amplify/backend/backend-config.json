@@ -1,46 +1,26 @@
 {
-	"auth": {
-		"bugtracker672d80b6": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": [],
-			"customAuth": false
-		}
-	},
-	"api": {
-		"bugtracker": {
-			"service": "AppSync",
-			"providerPlugin": "awscloudformation",
-			"output": {
-				"authConfig": {
-					"defaultAuthentication": {
-						"authenticationType": "API_KEY",
-						"apiKeyConfig": {
-							"apiKeyExpirationDays": 365,
-							"description": ""
-						}
-					},
-					"additionalAuthenticationProviders": []
-				}
-			}
-		}
-	},
 	"function": {
-		"bugLoad": {
-			"build": true,
-			"providerPlugin": "awscloudformation",
+		"bugtrackerTrigger60db96c9": {
 			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
 			"dependsOn": [
 				{
-					"category": "api",
+					"category": "storage",
 					"resourceName": "bugtracker",
 					"attributes": [
-						"GraphQLAPIIdOutput",
-						"GraphQLAPIEndpointOutput",
-						"GraphQLAPIKeyOutput"
+						"Name",
+						"Arn",
+						"StreamArn"
 					]
 				}
 			]
+		}
+	},
+	"storage": {
+		"bugtracker": {
+			"service": "DynamoDB",
+			"providerPlugin": "awscloudformation"
 		}
 	}
 }
