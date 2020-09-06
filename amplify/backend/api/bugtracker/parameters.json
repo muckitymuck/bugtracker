@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "bugtracker",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authbugtrackere86ca300",
+            "Outputs.UserPoolId"
+        ]
+    }
+}
