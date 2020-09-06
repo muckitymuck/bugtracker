@@ -4,21 +4,22 @@ schema {
 }
 
 type Query {
-  getTodos: [Todo]
+  getbugs: [bugs]
 }
 
 type Mutation {
-  addTodo(id: ID!, name: String, description: String, priority: Int): Todo
+  addbugs(bugID: ID!, priority: Int, description: String, title: String, version: Int): bugs
 }
 
-type Todo {
-  id: ID!
-  name: String
-  description: String
+type bugs {
+  bugID: ID!
   priority: Int
+  description: String
+  title: String
+  version: Int
 }
 
-enum TodoStatus {
+enum bugStatus {
   done
   pending
 }
