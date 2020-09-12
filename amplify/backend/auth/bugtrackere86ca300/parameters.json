@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "bugtracker672d80b6_identitypool_672d80b6",
+    "identityPoolName": "bugtrackere86ca300_identitypool_e86ca300",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "bugtra672d80b6",
-    "userPoolName": "bugtracker672d80b6_userpool_672d80b6",
+    "resourceNameTruncated": "bugtrae86ca300",
+    "userPoolName": "bugtrackere86ca300_userpool_e86ca300",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "bugtra672d80b6_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "bugtrae86ca300_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "672d80b6",
-    "resourceName": "bugtracker672d80b6",
+    "sharedId": "e86ca300",
+    "resourceName": "bugtrackere86ca300",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
