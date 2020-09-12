@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "function": {
         "bugtrackerTrigger60db96c9": {
             "service": "Lambda",
@@ -47,4 +48,54 @@
             }
         }
     }
+=======
+	"function": {
+		"bugtrackerTrigger60db96c9": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [
+				{
+					"category": "storage",
+					"resourceName": "bugtracker",
+					"attributes": [
+						"Name",
+						"Arn",
+						"StreamArn"
+					]
+				}
+			]
+		}
+	},
+	"storage": {
+		"bugtracker": {
+			"service": "DynamoDB",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"auth": {
+		"bugtrackere86ca300": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"api": {
+		"bugtracker": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authbugtrackere86ca300"
+						}
+					},
+					"additionalAuthenticationProviders": []
+				}
+			}
+		}
+	}
+>>>>>>> c1499e08ec3ccd85312241714e3362188a0fe87f
 }
